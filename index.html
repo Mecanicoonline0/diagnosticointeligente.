@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Diagnóstico Inteligente — Consulta Online</title>
+<meta name="description" content="Consulta online para diagnóstico automotivo. Pagamento via Pix R$ 39.90. Atendimento 100% remoto e transparente."/>
+<style>
+:root{--accent:#00b4ff;--muted:#9aa4ad}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, Arial, sans-serif;background:linear-gradient(180deg,#050506,#0b0c0e);color:#eaf6ff}
+.container{max-width:1100px;margin:28px auto;padding:20px}
+.header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo-mark{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#071018,#0b1116);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
+h1{margin:0;font-size:20px}
+.tag{color:var(--muted);font-size:13px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:26px;border-radius:14px;border:1px solid rgba(255,255,255,0.02)}
+.hero h2{margin:0;font-size:26px}
+.lead{color:var(--muted);line-height:1.5}
+.cta-row{margin-top:14px;display:flex;gap:12px;align-items:center}
+.btn{padding:12px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#006cff);color:#04121a}
+.btn-secondary{background:transparent;color:#dff7ff;border:1px solid rgba(255,255,255,0.04)}
+
+/* Card and sections */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);text-align:center}
+.section{margin-top:18px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.01)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:left}
+.small{font-size:13px;color:var(--muted)}
+
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;z-index:1200}
+.modal{background:#fbfcfd;color:#041017;padding:20px;border-radius:12px;max-width:520px;width:94%;box-shadow:0 12px 50px rgba(0,0,0,0.6)}
+.qr-img{width:260px;height:260px;display:block;margin:8px auto;border-radius:6px}
+.copy-row{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:8px}
+.copy-input{background:#fff;padding:10px;border-radius:8px;border:1px solid #e6eef3;font-size:14px;width:100%}
+.copy-btn{padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);cursor:pointer;background:transparent}
+
+/* Responsive */
+@media(max-width:860px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container" role="main">
+  <header class="header" role="banner">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo-mark" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21l3-3" stroke="#00b4ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 7.5L16.5 3 12 7.5 16.5 12 21 7.5z" stroke="#00b4ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Diagnóstico Inteligente</h1>
+        <div class="tag">Consulta online • Diagnóstico técnico • Transparência</div>
+      </div>
+    </div>
+    <div class="tag">WhatsApp: <a href="https://wa.me/5571993533377" style="color:#00b4ff;text-decoration:none">(71) 99353-3377</a></div>
+  </header>
+
+  <section class="hero" aria-label="Seção principal">
+    <div>
+      <h2>Consulta técnica online — R$ 39.90</h2>
+      <p class="lead"><strong>Atendimento 100% remoto.</strong> Pague via Pix e receba diagnóstico técnico, estimativa dos custos de peças e mão de obra, e orientações para não ser enganado. Nosso foco: economia e transparência.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="openPix">Pagar via Pix — R$ 39.90</button>
+        <a class="btn btn-secondary" href="https://wa.me/5571993533377?text=Olá! Quero contratar o Diagnóstico Inteligente.">Falar no WhatsApp</a>
+      </div>
+      <div style="margin-top:12px" class="note" role="note">
+        <strong>Atenção:</strong> após o pagamento, clique em "Já fiz o pagamento" no modal e envie o comprovante pelo WhatsApp. A confirmação do pagamento é feita manualmente. Assim como qualquer diagnóstico, nosso serviço também pode ter margem de erro — somos transparentes com isso.
+      </div>
+    </div>
+    <aside class="card" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" role="img" aria-label="QR informativo Pix">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="8" y="8" width="244" height="244" fill="#f7f9fb" stroke="#d0d7de" stroke-width="1" rx="12"/>
+  <text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#111">PIX (informativo)</text>
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-size="13" fill="#111">Chave: 8527610b-c339-43a7-b65f-969b6d9ea476</text>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="13" fill="#111">Valor: R$ 39.90</text>
+  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="11" fill="#444">Copie a chave ou escaneie com o app do seu banco</text>
+</svg>
+      <div style="margin-top:12px" class="small">O diagnóstico inclui:</div>
+      <ul class="small" style="text-align:left;margin-top:8px;color:#eaf6ff">
+        <li>Relatório técnico inicial</li>
+        <li>Estimativa de custo das peças</li>
+        <li>Estimativa de mão de obra média de mercado</li>
+        <li>Orientações para evitar fraudes</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="section" id="como-funciona">
+    <h3>Como funciona</h3>
+    <div class="grid-3" role="list">
+      <div class="feature" role="listitem"><strong>1 — Pagar a consulta</strong><div class="small">Valor simbólico para garantir compromisso e qualidade do atendimento.</div></div>
+      <div class="feature" role="listitem"><strong>2 — Enviar comprovante</strong><div class="small">Use o botão no modal para enviar comprovante e descrever os sintomas via WhatsApp.</div></div>
+      <div class="feature" role="listitem"><strong>3 — Receber diagnóstico</strong><div class="small">Você recebe o relatório técnico e estimativas para peças e mão de obra.</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <h3>Perguntas frequentes</h3>
+    <div class="small">
+      <strong>O serviço é 100% remoto?</strong><br/>Sim — oferecemos apenas atendimento remoto. Se precisar, indicamos oficinas de confiança; qualquer vistoria presencial é opcional e feita por terceiros.<br/><br/>
+
+      <strong>Como sei que o pagamento foi recebido?</strong><br/>A confirmação é manual — você envia o comprovante pelo WhatsApp e nossa equipe confirma o recebimento antes de iniciar o diagnóstico.<br/><br/>
+
+      <strong>E se o diagnóstico estiver errado?</strong><br/>Informamos com transparência que todo diagnóstico, presencial ou remoto, pode ter margem de erro. Sempre relatamos grau de confiança e próximos passos para confirmação.<br/><br/>
+
+      <strong>Posso ser reembolsado?</strong><br/>Política: a consulta é uma avaliação técnica; reembolsos serão analisados caso a caso. Entre em contato pelo WhatsApp para abrir solicitação.<br/>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h3>Contato</h3>
+    <p class="small">WhatsApp: <a href="https://wa.me/5571993533377" style="color:#00b4ff;text-decoration:none">Clique para iniciar atendimento</a></p>
+    <p class="small">Chave Pix: <strong id="pixKeyDisplay">8527610b-c339-43a7-b65f-969b6d9ea476</strong></p>
+  </section>
+
+  <footer class="footer" style="margin-top:18px;color:var(--muted)">
+    <div>© Diagnóstico Inteligente — Todos os direitos reservados</div>
+    <div>Desenvolvido por Paulo Edson</div>
+  </footer>
+</div>
+
+<!-- PIX Modal -->
+<div id="pixModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" role="document">
+    <h3 style="margin-top:0">Pagar via Pix — R$ 39.90</h3>
+    <p class="small" style="color:#041017">Abra o app do seu banco, escaneie o QR acima ou copie a chave Pix. Depois clique em "Já fiz o pagamento" e envie o comprovante pelo WhatsApp.</p>
+    <div style="text-align:center;margin-top:8px"><svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" role="img" aria-label="QR informativo Pix">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="8" y="8" width="244" height="244" fill="#f7f9fb" stroke="#d0d7de" stroke-width="1" rx="12"/>
+  <text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#111">PIX (informativo)</text>
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-size="13" fill="#111">Chave: 8527610b-c339-43a7-b65f-969b6d9ea476</text>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="13" fill="#111">Valor: R$ 39.90</text>
+  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="11" fill="#444">Copie a chave ou escaneie com o app do seu banco</text>
+</svg></div>
+    <div class="copy-row">
+      <input id="pixKey" class="copy-input" value="8527610b-c339-43a7-b65f-969b6d9ea476" readonly aria-label="Chave Pix" />
+      <button id="copyBtn" class="copy-btn">Copiar</button>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-top:14px">
+      <button id="closeModal" class="copy-btn">Fechar</button>
+      <button id="paidBtn" class="btn btn-primary">Já fiz o pagamento — Enviar comprovante</button>
+    </div>
+    <p class="small" style="margin-top:10px;color:#041017">OBS: a confirmação é manual. Ao clicar em "Já fiz o pagamento", você será direcionado ao WhatsApp para enviar o comprovante e descrever os sintomas.</p>
+  </div>
+</div>
+
+<script>
+const WHATSAPP = "5571993533377";
+const PIX_KEY = "8527610b-c339-43a7-b65f-969b6d9ea476";
+const AMOUNT = "39.90";
+
+// Modal controls
+const openPix = document.getElementById('openPix');
+const modal = document.getElementById('pixModal');
+const closeModal = document.getElementById('closeModal');
+const copyBtn = document.getElementById('copyBtn');
+const pixKeyInput = document.getElementById('pixKey');
+const paidBtn = document.getElementById('paidBtn');
+
+openPix.addEventListener('click', ()=>{ modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; });
+closeModal.addEventListener('click', ()=>{ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow='auto'; });
+copyBtn.addEventListener('click', ()=>{ navigator.clipboard.writeText(pixKeyInput.value).then(()=>{ alert('Chave Pix copiada para a área de transferência'); }).catch(()=>{ alert('Não foi possível copiar automaticamente. Por favor, copie manualmente: ' + pixKeyInput.value); }); });
+paidBtn.addEventListener('click', ()=>{ 
+  const message = encodeURIComponent('Olá! Acabei de pagar a consulta via Pix (R$ ' + AMOUNT + '). Segue o comprovante. Abaixo descrevo os sintomas:\n\nModelo/ano:\nCombustível:\nSintomas:\nQuando começou:\nReparo recente?');
+  window.open('https://wa.me/' + WHATSAPP + '?text=' + message, '_blank');
+  modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow='auto';
+});
+// Accessibility: close on Escape
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow='auto'; } });
+</script>
+</body>
+</html>
