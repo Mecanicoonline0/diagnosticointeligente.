@@ -1,162 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diagnóstico Inteligente — Mecânico Online</title>
-  <meta name="description" content="Consultoria e diagnóstico automotivo online. Envie sintomas, receba diagnóstico, orçamento e orientações por WhatsApp. Atendimento rápido e seguro." />
-  <link rel="stylesheet" href="css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"Diagnóstico Inteligente",
-    "description":"Serviço de diagnóstico automotivo remoto via WhatsApp.",
-    "provider": {"@type":"LocalBusiness","name":"Diagnóstico Inteligente"}
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico Inteligente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #111;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      color: #00aaff;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #00aaff; }
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(180deg, #111 0%, #0d0d0d 100%);
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #00aaff;
+    }
+    .hero p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #00aaff;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #0088cc; }
+    section {
+      padding: 60px 10%;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h3 {
+      color: #00aaff;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    section p {
+      color: #ccc;
+      line-height: 1.6em;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .benefit {
+      background: #111;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #1e1e1e;
+    }
+    .benefit h4 { color: #00aaff; margin-bottom: 10px; }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 40px 20px;
+      color: #aaa;
+      font-size: 0.95em;
+    }
+    footer a { color: #00aaff; text-decoration: none; }
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      nav { margin-top: 15px; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-row">
-    <a class="brand" href="#">
-      <img src="assets/logo.svg" alt="Diagnóstico Inteligente — logo" height="48">
-      <span>Diagnóstico Inteligente</span>
-    </a>
-    <nav class="nav" id="nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#precos">Preços</a>
-      <a href="#contato" class="btn-outline">Contato</a>
-    </nav>
-    <button id="menuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Diagnóstico automotivo remoto rápido e confiável</h1>
-        <p>Explique o problema, envie vídeos/fotos e receba diagnóstico, orientações e orçamento direto no WhatsApp.</p>
-        <div class="hero-cta">
-          <!-- WhatsApp link with official number prefilled -->
-          <a class="btn-primary" id="whatsCta" href="https://wa.me/5571993533377?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">
-            Conversar no WhatsApp
-          </a>
-          <a class="btn-outline" href="#servicos">Ver serviços</a>
-        </div>
-
-        <ul class="trust-list">
-          <li>✅ Atendimento remoto via WhatsApp</li>
-          <li>⚙️ Diagnóstico por foto/vídeo</li>
-          <li>💳 Pagamento por PIX ou cartão</li>
-          <li>⏱️ Resposta rápida</li>
-          <li>🔒 Privacidade e segurança</li>
-          <li>🛠️ Acompanhamento pós-serviço</li>
-        </ul>
-      </div>
-
-      <div class="hero-media">
-        <img src="assets/hero.jpg" alt="Diagnóstico automotivo online" />
-      </div>
-    </div>
-  </section>
-
-  <section id="servicos" class="section container">
-    <h2>Nossos serviços</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Diagnóstico por vídeo/foto</h3>
-        <p>Você envia fotos ou vídeo com os sintomas e recebemos um laudo com provável causa e soluções.</p>
-      </article>
-      <article class="card">
-        <h3>Consultoria e orçamento</h3>
-        <p>Recomendamos peças, mão-de-obra e estimativa de preço para conserto.</p>
-      </article>
-      <article class="card">
-        <h3>Suporte pós-diagnóstico</h3>
-        <p>Acompanhamento para garantir que o reparo foi bem-sucedido.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="como-funciona" class="section alt container">
-    <h2>Como funciona</h2>
-    <ol class="process">
-      <li><strong>1.</strong> Abra o WhatsApp e envie fotos/vídeo + placa e modelo.</li>
-      <li><strong>2.</strong> Receba diagnóstico preliminar e orçamento.</li>
-      <li><strong>3.</strong> Pague (PIX / cartão) e receba instruções passo a passo.</li>
-      <li><strong>4.</strong> Suporte pós-serviço, se necessário.</li>
-    </ol>
-  </section>
-
-  <section id="precos" class="section container">
-    <h2>Planos & Preços</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Diagnóstico Padrão</h3>
-        <p>Envio de fotos/vídeo + laudo básico — ideal para dúvidas simples.</p>
-        <p class="price">R$ 39,90</p>
-        <a class="btn-primary" href="https://wa.me/5571993533377?text=Quero%20o%20Diagn%C3%B3stico%20Padr%C3%A3o.%20Meu%20ve%C3%ADculo%20%3A%20" target="_blank" rel="noopener">Contratar</a>
-      </article>
-      <article class="card">
-        <h3>Diagnóstico Completo</h3>
-        <p>Laudo detalhado, orçamento de peças e acompanhamento por 7 dias.</p>
-        <p class="price">R$ 129,00</p>
-        <a class="btn-primary" href="https://wa.me/5571993533377?text=Quero%20o%20Diagn%C3%B3stico%20Completo.%20Meu%20ve%C3%ADculo%20%3A%20" target="_blank" rel="noopener">Contratar</a>
-      </article>
-    </div>
-  </section>
-
-  <section id="contato" class="section alt container contact-section">
-    <h2>Contato & Pagamento</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Fale direto no WhatsApp</h3>
-        <p>Use nosso canal oficial para diagnósticos e dúvidas.</p>
-        <p class="phone">📱 <strong>(71) 99353-3377</strong></p>
-        <a class="btn-primary" href="https://wa.me/5571993533377?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener">Abrir WhatsApp</a>
-      </div>
-
-      <div class="contact-card">
-        <h3>PIX</h3>
-        <p>Pagamento rápido e seguro via PIX.</p>
-        <p><em>Substitua abaixo pela chave PIX / QR real</em></p>
-        <img src="assets/qr_pix.png" alt="QR do PIX — substituir pela sua imagem" class="qr">
-        <p class="muted">Chave PIX: <strong>[insira sua chave PIX aqui]</strong></p>
-      </div>
-    </div>
-
-    <div class="faq">
-      <h4>Perguntas frequentes</h4>
-      <details>
-        <summary>O diagnóstico substitui oficina?</summary>
-        <p>Não — ele orienta e identifica prováveis falhas. Em muitos casos será necessário levar o veículo à oficina.</p>
-      </details>
-      <details>
-        <summary>Como envio vídeos grandes?</summary>
-        <p>Use o envio pelo WhatsApp ou um link (Drive/Dropbox) ao nos enviar a mensagem.</p>
-      </details>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-row">
-    <div>
-      <img src="assets/logo.svg" alt="" height="36">
-      <p>Diagnóstico Inteligente — Atendimento remoto</p>
-      <p class="muted">Email: <a href="mailto:diagnosticointeligente@gmail.com">diagnosticointeligente@gmail.com</a></p>
-    </div>
-    <nav class="footer-nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#como-funciona">Como funciona</a>
+  <header>
+    <h1>Diagnóstico Inteligente</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#funciona">Como Funciona</a>
       <a href="#contato">Contato</a>
     </nav>
+  </header>
+  <div class="hero" id="inicio">
+    <h2>Seu veículo analisado com tecnologia, precisão e economia</h2>
+    <p>Descubra o problema do seu carro em minutos usando inteligência artificial automotiva.</p>
+    <button class="btn">Fazer Diagnóstico Agora</button>
   </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <section id="beneficios">
+    <h3>Por que escolher o Diagnóstico Inteligente?</h3>
+    <p>Combinamos tecnologia e conhecimento automotivo para oferecer diagnósticos rápidos, acessíveis e confiáveis.</p>
+    <div class="benefits">
+      <div class="benefit">
+        <h4>⚙️ Precisão Tecnológica</h4>
+        <p>Nossa IA analisa sintomas e histórico do veículo com base em milhares de casos reais para sugerir causas prováveis.</p>
+      </div>
+      <div class="benefit">
+        <h4>💰 Custo-Benefício</h4>
+        <p>Evite gastos desnecessários com diagnósticos errados. Saiba o que realmente precisa ser feito e economize de forma inteligente.</p>
+      </div>
+      <div class="benefit">
+        <h4>⏱️ Agilidade Total</h4>
+        <p>Receba uma pré-análise em minutos, sem sair de casa. Tudo direto no seu celular.</p>
+      </div>
+      <div class="benefit">
+        <h4>🌍 Flexibilidade</h4>
+        <p>Nosso sistema está disponível 24 horas por dia, 7 dias por semana — pronto para te atender quando e onde você precisar.</p>
+      </div>
+    </div>
+  </section>
+  <section id="funciona">
+    <h3>Como Funciona</h3>
+    <p>1️⃣ Informe o modelo, ano e sintomas do veículo.<br>2️⃣ Nossa inteligência artificial processa seus dados.<br>3️⃣ Receba um relatório claro com possíveis causas e soluções.<br>4️⃣ Agende atendimento com oficinas parceiras de confiança.</p>
+  </section>
+  <section>
+    <h3>Transparência e Confiança</h3>
+    <p>Assim como em qualquer diagnóstico técnico, pode existir uma pequena margem de erro — mas fique tranquilo 😊.<br>Nosso sistema é constantemente atualizado e supervisionado por profissionais da área, garantindo o máximo de precisão e segurança nas informações que você recebe.</p>
+  </section>
+  <footer id="contato">
+    <p><strong>Entre em contato:</strong></p>
+    <p>📧 <a href="mailto:diagnosticointeligente@gmail.com">diagnosticointeligente@gmail.com</a></p>
+    <p>📱 <a href="https://wa.me/5571993533377" target="_blank">WhatsApp: (71) 99353-3377</a></p>
+    <br>
+    <p>© 2025 Diagnóstico Inteligente - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
