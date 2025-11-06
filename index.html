@@ -6,99 +6,25 @@
   <title>Diagnóstico Inteligente</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background: #111;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      color: #00aaff;
-      font-weight: 700;
-      font-size: 1.8em;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #f5f5f5;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+    body { background-color: #0d0d0d; color: #f5f5f5; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #111; flex-wrap: wrap; }
+    header h1 { color: #00aaff; font-weight: 700; font-size: 1.8em; }
+    nav a { margin: 0 15px; color: #f5f5f5; text-decoration: none; transition: 0.3s; }
     nav a:hover { color: #00aaff; }
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(180deg, #111 0%, #0d0d0d 100%);
-    }
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #00aaff;
-    }
-    .hero p {
-      font-size: 1.1em;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-    .btn {
-      background: #00aaff;
-      color: #fff;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+    .hero { text-align: center; padding: 120px 20px; background: linear-gradient(180deg, #111 0%, #0d0d0d 100%); }
+    .hero h2 { font-size: 2.5em; margin-bottom: 20px; color: #00aaff; }
+    .hero p { font-size: 1.1em; color: #ccc; margin-bottom: 30px; }
+    .btn { background: #00aaff; color: #fff; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: 0.3s; }
     .btn:hover { background: #0088cc; }
-    section {
-      padding: 60px 10%;
-      text-align: center;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h3 {
-      color: #00aaff;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-    section p {
-      color: #ccc;
-      line-height: 1.6em;
-    }
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .benefit {
-      background: #111;
-      padding: 25px;
-      border-radius: 10px;
-      border: 1px solid #1e1e1e;
-    }
+    section { padding: 60px 10%; text-align: center; max-width: 1000px; margin: auto; }
+    section h3 { color: #00aaff; font-size: 1.8em; margin-bottom: 20px; }
+    section p { color: #ccc; line-height: 1.6em; }
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+    .benefit { background: #111; padding: 25px; border-radius: 10px; border: 1px solid #1e1e1e; }
     .benefit h4 { color: #00aaff; margin-bottom: 10px; }
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 40px 20px;
-      color: #aaa;
-      font-size: 0.95em;
-    }
+    footer { background: #111; text-align: center; padding: 40px 20px; color: #aaa; font-size: 0.95em; }
     footer a { color: #00aaff; text-decoration: none; }
-    @media (max-width: 768px) {
-      header { flex-direction: column; text-align: center; }
-      nav { margin-top: 15px; }
-    }
+    @media (max-width: 768px) { header { flex-direction: column; text-align: center; } nav { margin-top: 15px; } }
   </style>
 </head>
 <body>
@@ -111,14 +37,19 @@
       <a href="#contato">Contato</a>
     </nav>
   </header>
+
   <div class="hero" id="inicio">
     <h2>Seu veículo analisado com tecnologia, precisão e economia</h2>
     <p>Descubra o problema do seu carro em minutos usando inteligência artificial automotiva.</p>
-    <button class="btn">Fazer Diagnóstico Agora</button>
+    <a href="https://wa.me/5571993533377?text=Ol%C3%A1!%20Gostaria%20de%20realizar%20um%20diagn%C3%B3stico%20inteligente%20do%20meu%20ve%C3%ADculo.%0AModelo:%20%5Binforme%20aqui%5D%0AAno:%20%5Binforme%20aqui%5D%0AProblema%20apresentado:%20%5Bdescreva%20aqui%5D%0AH%C3%A1%20quanto%20tempo%20o%20problema%20ocorre:%20%5Binforme%20aqui%5D" target="_blank">
+      <button class="btn">Fazer Diagnóstico Agora</button>
+    </a>
   </div>
+
   <section id="beneficios">
     <h3>Por que escolher o Diagnóstico Inteligente?</h3>
     <p>Combinamos tecnologia e conhecimento automotivo para oferecer diagnósticos rápidos, acessíveis e confiáveis.</p>
+
     <div class="benefits">
       <div class="benefit">
         <h4>⚙️ Precisão Tecnológica</h4>
@@ -138,17 +69,28 @@
       </div>
     </div>
   </section>
+
   <section id="funciona">
     <h3>Como Funciona</h3>
-    <p>1️⃣ Informe o modelo, ano e sintomas do veículo.<br>2️⃣ Nossa inteligência artificial processa seus dados.<br>3️⃣ Receba um relatório claro com possíveis causas e soluções.<br>4️⃣ Agende atendimento com oficinas parceiras de confiança.</p>
+    <p>
+      1️⃣ Informe o modelo, ano e sintomas do veículo.<br>
+      2️⃣ Nossa inteligência artificial processa seus dados.<br>
+      3️⃣ Receba um relatório claro com possíveis causas e soluções.<br>
+      4️⃣ Agende atendimento com oficinas parceiras de confiança.
+    </p>
   </section>
+
   <section>
     <h3>Transparência e Confiança</h3>
-    <p>Assim como em qualquer diagnóstico técnico, pode existir uma pequena margem de erro — mas fique tranquilo 😊.<br>Nosso sistema é constantemente atualizado e supervisionado por profissionais da área, garantindo o máximo de precisão e segurança nas informações que você recebe.</p>
+    <p>
+      Assim como em qualquer diagnóstico técnico, pode existir uma pequena margem de erro — mas fique tranquilo 😊.<br>
+      Nosso sistema é constantemente atualizado e supervisionado por profissionais da área, garantindo o máximo de precisão e segurança nas informações que você recebe.
+    </p>
   </section>
+
   <footer id="contato">
     <p><strong>Entre em contato:</strong></p>
-    <p>📧 <a href="mailto:diagnosticointeligente@gmail.com">diagnosticointeligente@gmail.com</a></p>
+    <p>📧 <a href="mailto:Diaginosticointeligente@gmail.com">Diaginosticointeligente@gmail.com</a></p>
     <p>📱 <a href="https://wa.me/5571993533377" target="_blank">WhatsApp: (71) 99353-3377</a></p>
     <br>
     <p>© 2025 Diagnóstico Inteligente - Todos os direitos reservados</p>
